@@ -1,1 +1,96 @@
 @import "bootstrap/bootstrap.less";
+
+.card-board{
+    .card-list {
+        background-color: silver;
+        border-radius: 5px;
+        box-shadow: 2px 2px #262626;
+
+        .card-list-body{
+            min-height: 2em;
+            padding: 0 2px 0 2px;
+            .card {
+                list-style: none;
+                margin: 0 0 5px 0;
+                &:hover {
+                    border: 1px #002a80;
+                    box-shadow: 1px 1px 1px 1px #262626;
+                }
+            }
+        }
+
+        .card-list-header{
+            text-align: center;padding: 2px;
+            .dropdown-toggle {
+                visibility:hidden;
+            }
+            span {
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 27px;
+                color: #000000;
+                &:hover {
+                    color: #ffffff;
+                }
+            }
+            &:hover {
+                .dropdown-toggle {
+                    visibility:inherit;
+                }
+            }
+        }
+
+        .card-list-footer {
+            padding: 0 2px 2px 2px;
+            span.label{
+                float: right;
+            }
+            form .new-card-content{
+                width: 90%;
+            }
+        }
+    }
+}
+
+.placeholder {
+    border: 1px solid #fed22f;
+    background: #ffe45c 50% top repeat-x;
+    color: #363636;
+    border-radius: 5px;
+}
+
+.list-height {
+    min-height: 5em;
+}
+
+div.report {
+    border: 1px;
+}
+ul.itemhead {
+    text-align: center;
+    border-top: 1px #faebd7;
+    background-color: black;
+}
+
+ul.itemhead li{
+    float: left;
+    list-style-type: none;
+    background-color: green;
+    border-radius: 2px;
+    padding: 3px;
+    width: 300px;
+    margin: 1px;
+}
+
+ul.item {
+    background-color: #faebd7;
+    text-align: center;
+}
+
+ul.item li {
+    float: left;
+    list-style-type: none;
+    width: 300px;
+    margin: 1px;
+}
+
