@@ -12,5 +12,9 @@ object Application extends Controller {
   def board = Action {
   	Ok(views.html.board())
   }
+
+  def coffeebone = Action {
+  	Ok(views.html.coffeebone())
+  }
   
 }

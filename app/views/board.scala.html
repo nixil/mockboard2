@@ -27,7 +27,7 @@
 
 <body style="background-color: #005580;">
 
-<div class="navbar navbar-fixed-top">
+<div id="mainMenu" class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -78,20 +78,6 @@
                         </div>
                     </div>
                     <div id="firstCardList" class="card-list-body">
-                        <div class="well card" >
-                            <a class="close">&times;</a>
-                            item1
-                            <p>另起一段</p>
-                        </div>
-                        <div class="well card" >
-                            item2
-                        </div>
-                        <div class="well card" >
-                            item3
-                        </div>
-                        <div class="well card" >
-                            item4
-                        </div>
                     </div>
                     <div class="card-list-footer">
                         <span class="label btn-add-card">New Card</span>
@@ -114,9 +100,7 @@
                         </div>
                     </div>
                     <div id="secondCardList" class="card-list-body">
-                        <div class="well card">
-                            item5
-                        </div>
+                        
                     </div>
                     <div class="card-list-footer">
                         <span class="label btn-add-card">New Card</span>
@@ -153,6 +137,8 @@
 </div>
 
 <script src='@routes.Assets.at("javascripts/jquery-1.7.1.min.js")' type="text/javascript"></script>
+<script src='@routes.Assets.at("javascripts/underscore-min.js")' type="text/javascript"></script>
+<script src='@routes.Assets.at("javascripts/backbone-min.js")' type="text/javascript"></script>
 <script src='@routes.Assets.at("jquery-ui/js/jquery-ui-1.8.18.custom.min.js")' type="text/javascript"></script>
 <script src='@routes.Assets.at("jquery-tmpl/jquery.tmpl.min.js")' type="text/javascript"></script>
 <script src='@routes.Assets.at("bootstrap/bootstrap.js")' type="text/javascript"> </script>

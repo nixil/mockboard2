@@ -1,4 +1,11 @@
+# Just a log helper
+log = (args...) ->
+  console.log.apply console, args if console.log?
+
+# ---- Card View
+
 $ ->
+
   cardTemplate = $("#card-template")
   cardListTemplate = $("#card-list-template")
   newCardFormTemplate = $("#new-card-form-template")
@@ -41,14 +48,14 @@ $ ->
     $input = $form.find("input.new-card-content").focus()
     cardListBody = $btn_newCard.parent(null).siblings(".card-list-body")
 
-    $form.submit ->
+    $form.submit (e) ->
+      e.preventDefault()
       if $input.val().trim()
         addCard cardListBody, $input.val()
         $input.parent().removeClass "error"
         @reset()
       else
         $input.parent().addClass "error"
-      return false
 
     $input.blur ->
       if $input.val().trim() == ""
