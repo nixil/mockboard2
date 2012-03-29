@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>Mock Board</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" media="screen" href='@routes.Assets.at("stylesheets/main.css")'>
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+    <link rel="stylesheet" media="screen" href='@routes.Assets.at("jquery-ui/css/ui-lightness/jquery-ui-1.8.18.custom.css")'>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href='@routes.Assets.at("images/favicon.png")'>
+
+</head>
+
+<body style="background-color: #005580;">
+
+<nav id="menu" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">Mock Board</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="dropdown action">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Action
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="add-list" href="#addColumn">Add List</a></li>
+                            <li><a class="add-member">Add Member</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</nav>
+
+<section id="board" class="card-board container-fluid">
+    <header>
+        <h3>
+            看板标题
+        </h3>
+    </header>
+</section>
+
+<script src='@routes.Assets.at("javascripts/jquery-1.7.1.min.js")' type="text/javascript"></script>
+<script src='@routes.Assets.at("javascripts/underscore-min.js")' type="text/javascript"></script>
+<script src='@routes.Assets.at("javascripts/backbone-min.js")' type="text/javascript"></script>
+<script src='@routes.Assets.at("jquery-ui/js/jquery-ui-1.8.18.custom.min.js")' type="text/javascript"></script>
+<script src='@routes.Assets.at("jquery-tmpl/jquery.tmpl.min.js")' type="text/javascript"></script>
+<script src='@routes.Assets.at("bootstrap/bootstrap.js")' type="text/javascript"> </script>
+<script src='@routes.Assets.at("javascripts/board_bone.js")' type="text/javascript"></script>
+
+<script id="card-list-template" type="text/x-jquery-tmpl">
+    <div class="span3 card-list">
+        <div class="card-list-header">
+            <span><%= title %></span>
+            <div class="dropdown" style="float: right; padding-right: 3px;">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-list-body">
+
+        </div>
+        <div class="card-list-footer">
+            <span class="label btn-add-card">New Card</span>
+        </div>
+    </div>
+</script>
+<script id="card-template" type="text/x-jquery-tmpl">
+    <div class="well card">
+        {{= content}}
+    </div>
+</script>
+<script id="new-card-form-template" type="text/x-jquery-tmpl">
+    <form class="well">
+        <div class="control-group">
+            <input type="text" class="new-card-content" placeholder="Write Card Title Here">
+        </div>
+        <input type="submit" class="btn-primary btn-save" value="Save">
+    </form>
+</script>
+</body>
+</html>
